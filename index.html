@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ultah bubub yang Paling Heboh</title>
+<title>Ultah Bubub yang Paling Heboh</title>
 <style>
   body {
     margin: 0;
@@ -43,11 +43,9 @@
 </head>
 <body>
 
-<!-- Tombol Musik + Audio DARI GITHUB PAGES -->
+<!-- Tombol Musik + Audio DARI GITHUB KAMU -->
 <button id="musicBtn" class="btn" onclick="playMusic()">🔊 Putar Musik</button>
-<audio id="laguUltah" loop preload="auto">
-  <source src="https://adelia2807.github.io/ucapan-ultah-bub/HBD%20NALDY%20BAIK%202026%20(1).wav" type="audio/wav">
-</audio>
+<audio id="laguUltah" src="musik.wav" loop preload="auto"></audio>
 
 <!-- SECTION 1: BUKA DULU -->
 <section style="background: #ff5e78;">
@@ -59,19 +57,16 @@
 
 <!-- SECTION 2: FOTO -->
 <section id="section2" style="background: #ff9a9e;">
-  <h1>SELAMAT ULANG TAHUN BUBUB!! 🥳</h1>
+  <h1>SELAMAT ULANG TAHUN BUB!! 🥳</h1>
   <p>Umur boleh nambah, tapi lucunya jangan ya</p>
-  <img src="https://uploads.onecompiler.io/44ubwyzcg/1783278468541/bubub.png" alt="Foto bubu Paling ganteng">
+  <img src="bub.png" alt="Foto bubu Paling ganteng">
   <button class="btn" onclick="document.getElementById('section3').scrollIntoView()">Scroll Lagi Dong 👇</button>
 </section>
 
-<!-- SECTION 3: VIDEO DARI GITHUB PAGES -->
+<!-- SECTION 3: VIDEO DARI GITHUB KAMU -->
 <section id="section3" style="background: #fecfef;">
   <h1>ADA VIDEO KHUS NIH 👀</h1>
-  <video width="300" controls preload="metadata">
-    <source src="https://drive.google.com/file/d/1Evi54IfTaMtkAonjqCA-HSvuo8t4W3v2/view?usp=drive_link" type="video/mp4">
-    Browser kamu gak support video
-  </video>
+  <video width="300" src="video.mp4" controls preload="metadata"></video>
   <button class="btn" onclick="document.getElementById('section4').scrollIntoView()">Masih Ada Lagi Loh</button>
 </section>
 
@@ -80,7 +75,7 @@
   <div class="emoji">🎂</div>
   <h1>Doa dari aku:</h1>
   <p>Semoga 6 Juli ini rezeki bub lancar, <br>
-  Musiknya cepet viral, dan dan makin sukses 😆🫂</p>
+  Musiknya cepet viral, dan makin sukses 😆🫂</p>
   <button class="btn" onclick="alert('Kado: Peluk virtual terhangat dari aku 🤗')">Ambil Kado Terakhir</button>
 </section>
 
@@ -88,7 +83,6 @@
   let musik = document.getElementById('laguUltah');
   let tombol = document.getElementById('musicBtn');
   let isPlaying = false;
-  musik.load();
 
   function playMusic() {
     if (!isPlaying) {
