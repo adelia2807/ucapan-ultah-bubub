@@ -1,6 +1,110 @@
 <!DOCTYPE html>
-<html>
-  <body>
-     https://adelia2807.github.io/ucapan-ultah-bub/WhatsApp%20Video%202026-07-06%20at%2002.10.30.mp4
-  </body>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultah bubub yang Paling Heboh</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(180deg, #ffdde1, #ee9ca7, #fbc2eb);
+    color: #fff;
+    text-align: center;
+    scroll-behavior: smooth;
+  }
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  h1 { font-size: 3em; text-shadow: 3px 3px 0 #ff5e78; animation: wiggle 2s infinite; }
+  @keyframes wiggle { 0%,100%{transform:rotate(-2deg)} 50%{transform:rotate(2deg)} }
+  .btn {
+    background: #fff; color: #ff5e78; border: none; padding: 15px 30px;
+    border-radius: 50px; font-size: 1.2em; font-weight: bold; cursor: pointer; margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.3s;
+  }
+  .btn:hover { transform: scale(1.1); }
+  img {
+    max-width: 80%; border-radius: 20px; border: 8px dashed #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); margin: 20px 0;
+  }
+  video {
+    max-width: 90%; border-radius: 20px; margin: 20px 0; box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+  .emoji { font-size: 4em; animation: bounce 1.5s infinite; }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+  #musicBtn { position: fixed; top: 20px; right: 20px; z-index: 99; padding: 10px 15px; font-size: 1em; }
+</style>
+</head>
+<body>
+
+<!-- Tombol Musik + Audio DARI GITHUB PAGES -->
+<button id="musicBtn" class="btn" onclick="playMusic()">🔊 Putar Musik</button>
+<audio id="laguUltah" loop preload="auto">
+  <source src="https://adelia2807.github.io/ucapan-ultah-bub/HBD%20NALDY%20BAIK%202026%20(1).wav" type="audio/wav">
+</audio>
+
+<!-- SECTION 1: BUKA DULU -->
+<section style="background: #ff5e78;">
+  <div class="emoji">🎉</div>
+  <h1>EH SIAPA TUH ULTAH?</h1>
+  <p>Klik tombol musik pojok kanan atas dulu yaa 👆</p>
+  <button class="btn" onclick="document.getElementById('section2').scrollIntoView()">Udah, Lanjut 😱</button>
+</section>
+
+<!-- SECTION 2: FOTO -->
+<section id="section2" style="background: #ff9a9e;">
+  <h1>SELAMAT ULANG TAHUN BUBUB!! 🥳</h1>
+  <p>Umur boleh nambah, tapi lucunya jangan ya</p>
+  <img src="https://uploads.onecompiler.io/44ubwyzcg/1783278468541/bubub.png" alt="Foto bubu Paling ganteng">
+  <button class="btn" onclick="document.getElementById('section3').scrollIntoView()">Scroll Lagi Dong 👇</button>
+</section>
+
+<!-- SECTION 3: VIDEO DARI GITHUB PAGES -->
+<section id="section3" style="background: #fecfef;">
+  <h1>ADA VIDEO KHUS NIH 👀</h1>
+  <video width="300" controls preload="metadata">
+    <source src="https://drive.google.com/file/d/1Evi54IfTaMtkAonjqCA-HSvuo8t4W3v2/view?usp=drive_link" type="video/mp4">
+    Browser kamu gak support video
+  </video>
+  <button class="btn" onclick="document.getElementById('section4').scrollIntoView()">Masih Ada Lagi Loh</button>
+</section>
+
+<!-- SECTION 4: PENUTUP + KADO -->
+<section id="section4" style="background: #a18cd1;">
+  <div class="emoji">🎂</div>
+  <h1>Doa dari aku:</h1>
+  <p>Semoga 6 Juli ini rezeki bub lancar, <br>
+  Musiknya cepet viral, dan dan makin sukses 😆🫂</p>
+  <button class="btn" onclick="alert('Kado: Peluk virtual terhangat dari aku 🤗')">Ambil Kado Terakhir</button>
+</section>
+
+<script>
+  let musik = document.getElementById('laguUltah');
+  let tombol = document.getElementById('musicBtn');
+  let isPlaying = false;
+  musik.load();
+
+  function playMusic() {
+    if (!isPlaying) {
+      musik.play().then(() => {
+        tombol.innerText = "🔇 Pause Musik";
+        isPlaying = true;
+      }).catch(() => {
+        alert("Klik tombolnya 1x aja ya biar musiknya jalan 🎵");
+      });
+    } else {
+      musik.pause();
+      tombol.innerText = "🔊 Putar Musik";
+      isPlaying = false;
+    }
+  }
+</script>
+
+</body>
 </html>
